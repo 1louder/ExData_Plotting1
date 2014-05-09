@@ -10,3 +10,8 @@ subDates <- subset(data, data$Date == "1/2/2007" | data$Date == "2/2/2007")
 
 plot1 <- as.numeric(subDates$Global_active_power)
 hist(plot1, main="Global Active Power", col="red", xlab="Global Active Power (kilowatts)", ylab = "Frequency")
+
+## create a .png file of the histogram
+
+dev.copy(png, file = "plot1.png", width = 580, height = 580, units = "px")
+dev.off()
