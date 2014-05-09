@@ -13,5 +13,5 @@ hist(plot1, main="Global Active Power", col="red", xlab="Global Active Power (ki
 
 ## create a .png file of the histogram
 
-dev.copy(png, file = "plot1.png", width = 580, height = 580, units = "px")
+dev.copy(png, file = "plot1.png", width = 480, height = 480, units = "px")
 dev.off()
