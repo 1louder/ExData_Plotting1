@@ -5,6 +5,7 @@ data <- read.table("household_power_consumption.txt", sep=";", as.is=TRUE, heade
 subDates <- subset(data, data$Date == "1/2/2007" | data$Date == "2/2/2007")
 
 ## create 2x2 plot space
+png("plot4.png", width = 480, height = 480, units = "px")
 par(mfrow = c(2,2))
 
 ## top left plot
@@ -32,3 +33,5 @@ legend("topright", lty=1, col=c("black", "red", "blue"), legend=c("Sub_metering_
 plot4 <- as.numeric(subDates$Global_reactive_power)
 days <- strptime(paste(subDates$Date, subDates$Time), format="%d/%m/%Y %H:%M:%S")
 plot(days, plot4, xlab="datetime", ylab="Global_reactive_power", type="l")
+
+dev.off()
