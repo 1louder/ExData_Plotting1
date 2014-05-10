@@ -4,7 +4,7 @@ data <- read.table("household_power_consumption.txt", sep=";", as.is=TRUE, heade
 ## focus on data from February 1-2, 2007
 subDates <- subset(data, data$Date == "1/2/2007" | data$Date == "2/2/2007")
 
-## create a plot of the energy sub metering 
+## set up parameters for plot 
 plot3a <- as.numeric(subDates$Sub_metering_1)
 plot3b <- as.numeric(subDates$Sub_metering_2)
 plot3c <- as.numeric(subDates$Sub_metering_3)
